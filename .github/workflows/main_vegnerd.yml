@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: build
+
 jobs:
   build:
     runs-on: windows-latest
@@ -34,6 +37,7 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           exclusions: '*.git* /*node_modules/* .editorconfig'
+          path: .
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
