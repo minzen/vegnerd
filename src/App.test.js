@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders app name vegnerd', () => {
   render(<App />);
-  const appName = screen.getByText(/Vegnerd/i);
+  const appName = screen.getByAltText(/Vegnerd/i);
   expect(appName).toBeInTheDocument();
 });

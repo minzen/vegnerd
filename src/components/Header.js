@@ -16,10 +16,10 @@ const Header = () => {
 
   return (
     <Container maxWidth="xl">
-      <Grid container direction="column" justify="center">
+      <Grid container direction="column" justifyContent="center">
         <Grid item xs={12} className={classes.headerSection}>
           <a href="/">
-            <img src={Logo} alt="sitelogo" />
+            <img src={Logo} alt="Vegnerd logo" />
           </a>
         </Grid>
       </Grid>
