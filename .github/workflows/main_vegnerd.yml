@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_PACKAGE_PATH: build
+
 jobs:
   build:
     runs-on: windows-latest
@@ -53,4 +56,4 @@ jobs:
           app-name: 'Vegnerd'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E2B6DE24E375442ABF4200569532439D }}
-          package: .
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
