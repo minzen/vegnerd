@@ -36,7 +36,6 @@ jobs:
         with:
           type: 'zip'
           filename: 'release.zip'
-          exclusions: '*.git* /*node_modules/* .editorconfig'
           path: .
 
       - name: Upload artifact for deployment job
